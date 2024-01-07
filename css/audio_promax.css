@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 300px;
+    height: 300px;
+    transform: scale(1.04);
+    opacity: 0.95;
+}
+
+body {
+    background-color: #CCCCCC;
+    opacity: 0.8;
+}
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    font-family: "方正舒体";
+    line-height: 72px;
+}
+
+a{color: aqua;}
+a:link {
+    color: aqua;
+    text-decoration: none;
+    /* <!--未访问时的状态--> */
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+    /* <!--经过悬停时的状态--> */
+}
+.bgimg{
+    position: absolute;
+    top: 5px; 
+    z-index: -1; 
+    width: 98%; 
+    height: 162%; 
+    filter:brightness(0.4);
+}
+@media screen and (max-width:800px){
+    .bgimg{
+        filter: brightness(0.2);
+    }
+}
+
+
+
+audio {
+    display: none;
+}
+
+.o-box {
+    width: 300px;
+    height: 300px;
+    margin: 10% auto 2%;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 0px 45px;
+    position: relative;
+    transition: all 0.8s linear;    
+}
+.o-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 35px 1px;  
+}
+.o-box:hover .music_img,.o-box:hover b{
+    filter: blur(0px);
+}
+
+.d-box img{
+    transition: all 1.5s linear;  
+    filter: blur(1px);
+}
+
+/* 唱片转动部分 */
+.d-box {
+    animation: zhuandong 120s linear 2s infinite;  
+    /* 延迟2s等音乐 */
+    animation-play-state: paused;
+}
+@keyframes zhuandong {
+    form {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 控制播放部分 */
+.play {
+    position: absolute;
+    font-size: 35px;
+    left: 47%;
+    top: 45%;
+    cursor: pointer;
+}
+/* 上一首 */
+i:nth-child(3) {
+    position: absolute;
+    left: 30%;
+    top: 46%;
+    font-size: 30px;
+}
+/* 下一首 */
+i:nth-child(4) {
+    position: absolute;
+    left: 64%;
+    top: 46%;
+    font-size: 30px;
+}
+/* 播放方式 */
+i:nth-child(5) {
+    position: absolute;
+    left: 80%;
+    top: 48%;
+    font-size: 20px;
+}
+i:nth-child(6) {
+    position: absolute;
+    left: 17%;
+    top: 48%;
+    font-size: 20px;
+}
+.last,.next,.loop,.list{cursor: pointer;}
+
+/* 歌首部分 */
+b {
+    position: absolute;
+    font-size: 32px;
+    /* left: 48%; */
+    top: 15%;
+    z-index: 1;
+    /* text-shadow: 10px 5px 20px coral; */
+    text-shadow: 10px 5px 20px white;
+}
+b:nth-child(1){
+    left: 16%;
+    width: 225px;
+    text-align: right;
+}
+b:nth-child(2) {
+    position: absolute;
+    top: 32%;
+    left: 70%;
+    /* color: white; */
+    font-size: 18px;
+}
+
+
+/* 歌词部分 */
+.context {
+    position: absolute;
+    left: 32%;
+    top: 62%;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    text-shadow: 0px 0px 15px white;
+}
+
+input{
+    display: none;
+}
+
+.hide,
+.show {
+    color: rgb(236, 178, 69);
+    font-family: "Microsoft YaHei";
+}
+
+.checkbox,
+.more,
+.hide,
+.checkbox:checked~.text_label .show {
+    position: absolute;
+    left: -28em;
+}
+
+.checkbox:checked~.more,
+.checkbox:checked~.text_label .hide {
+    position: static;
+}
+
+
+
+/* 进度条部分 */
+.concollect {
+    display: none;
+    scale: 0.8;
+    opacity: 0.2;
+}
+
+.total {
+    width: 500px;
+    height: 10px;
+    background-color: #ffc300;
+    border-radius: 5px;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.current {
+    width: 0px;
+    height: 10px;
+    background-color: rgb(249, 116, 0);
+    border-radius: 5px;
+}
+
+.time {
+    width: 480px;
+    margin: 5px auto;
+    text-align: right;
+}
+
+
+
+/* 音乐列表显示 */
+.listShow{
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+
+/* 视频 */
+.plays{
+    width: 30%;
+    height: 200px; 
+    margin: 0 auto; 
+    cursor: pointer; 
+    margin-bottom: 10px;
+    transition: filter 1.2s linear;
+    filter: blur(4px);
+}
+.plays:hover{
+    filter: blur(0px);
+}
+
+.plays-box{
+    text-align: center;
+    margin-bottom: 10px;
+}
