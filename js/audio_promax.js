@@ -75,7 +75,7 @@ var music = [
         Img: "./image/生生世世爱.jpg"
     },{
         Name: "《此生不换》",
-        Secname: "青鸟飞鱼 <i class='fas fa-compact-disc'></i>",
+        Secname: "青鸟飞鱼<i class='fas fa-compact-disc'></i>",
         Url: "./mp3/此生不换.mp3",
         Img: "./image/此生不换.jpg"
     },{
@@ -84,15 +84,15 @@ var music = [
         Url: "./mp3/One Last Time.mp3",
         Img: "./image/One Last Time.jpg"
     },{
-        Name: "《Catch My Breath》",
-        Secname: " ",
-        Url: "./mp3/凯. - Catch My Breath [qmms].mp3",
-        Img: "./image/audio0.jpg"
+        Name: "《还是会想你》",
+        Secname: "圈圈菌 <i class='fas fa-compact-disc'></i>",
+        Url: "./mp3/还是会想你.mp3",
+        Img: "./image/还是会想你.jpg"
     }, {
         Name: "《反方向的钟》",
         Secname: "周杰伦 <i class='fas fa-compact-disc'></i>",
         Url: "./mp3/九三 - 反方向的钟 (Live).mp3",
-        Img: "./image/audio1.jpg"
+        Img: "./image/反方向的钟.jpg"
     }, {
         Name: "《伴你成长》",
         Secname: "张雨桐 <i class='fas fa-compact-disc'></i>",
@@ -102,17 +102,17 @@ var music = [
         Name: "《晴天》",
         Secname: "张雨桐 <i class='fas fa-compact-disc'></i>",
         Url: "./mp3/张雨桐 - 晴天.mp3",
-        Img: "./image/audio.png"
+        Img: "./image/晴天.png"
     }, {
-        Name: "《回忆拼给你》",
-        Secname: "王贰浪 <i class='fas fa-compact-disc'></i>",
-        Url: "./mp3/把回忆拼好给你.mp3",
-        Img: "./image/bgimg1.jpg"
-    },{
+        Name: "《Payphone》",
+        Secname: "Maroon<i class='fas fa-compact-disc'></i>",
+        Url: "./mp3/Payphone.mp3",
+        Img: "./image/Payphone.jpg"
+    }, {
         Name: "《主角》",
         Secname: "马里奥 <i class='fas fa-compact-disc'></i>",
         Url: "./mp3/主角.mp3",
-        Img: "./image/audio2.jpg"
+        Img: "./image/主角.jpg"
     }
 ]
 
@@ -152,12 +152,14 @@ function randomMusic() {
 }
 
 var img = document.querySelector("img")
+var bgimg = document.querySelector(".bgimg")
 // 音频列表
 function musicList(n) {
     b.innerHTML = music[n].Name
     b2.innerHTML = music[n].Secname
     audio.src = music[n].Url
     img.src = music[n].Img
+    bgimg.src = music[n].Img
 }
 
 // 切换歌曲后的播放操作

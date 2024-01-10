@@ -247,3 +247,15 @@ input{
     text-align: center;
     margin-bottom: 10px;
 }
+
+#tests{
+    animation: tests 3s linear;
+}
+@keyframes tests {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
