@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./image/bgimg3.jpg">
+    <link rel="icon" href="./image/Tom.jpg">
     <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.css">
     <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/v4-shims.min.css">
     <title>XGJ</title>
     <script src="./js/vue.min.js"></script>
     <link rel="stylesheet" href="./css/audio_promax.css">
-
 </head>
 
 <body>  
@@ -23,33 +22,35 @@
             <button type="button" onclick="randomMusic()" 
                 style="width: 95px; height: 28px; position: absolute; left: 47%; top: 400px; cursor: pointer;" 
                 title="随机播放">随机一首
-            </button>
+            </button>            
         </strong>
     </h2>
     <div class="o-box" style="margin: 2% auto;">
-        <div class="dong d-box">
-            <b>《主角》</b>
-            <b>马里奥 <i class="fas fa-compact-disc"></i></b>
-            <img src="./image/audio2.jpg" class="music_img">
-            <div class="context">
-                <strong>
-                    <input type="checkbox" id="toggleCheckbox" class="checkbox" />
-                    <span>故事的小黄花<br>从出生那年就飘着<br>童年的荡秋千
-                        <br>随记忆一直晃到现在....</span><br>
-                    <span class="more">Re so so si do si la<br>So la si si si la is la so<br></span>
-                    <label class="text_label" for="toggleCheckbox">
-                        <span class="hide">收起↑</span>
-                        <span class="show">展开↓</span>
-                    </label>
-                </strong>
+        <div id="tests">
+            <div class="dong d-box">
+                <b>《主角》</b>
+                <b>马里奥 <i class="fas fa-compact-disc"></i></b>
+                <img src="./image/bgimg2.gif" class="music_img">
+                <div class="context">
+                    <strong>
+                        <input type="checkbox" id="toggleCheckbox" class="checkbox" />
+                        <br>
+                        <span>毕竟不是每个人<br>都能做自己想做的事<br>成为自己想成为的人</span><br>
+                        <span class="more">这不就是你<br>梦寐以求的长大吗<br></span>
+                        <label class="text_label" for="toggleCheckbox">
+                            <span class="hide">收起</span>
+                            <span class="show">展开</span>
+                        </label>
+                    </strong>
+                </div>
             </div>
+            <i class="fas fa-play play" title="暂停/播放"></i>
+            <i class="fas fa-fast-backward last" title="上一首"></i>
+            <i class="fas fa-fast-forward next" title="下一首"></i>
+            <i class="fas fa-random loop" title="顺序/循环播放"></i>
+            <i class="fas fa-bars list" title="音乐列表"></i>
+            <audio src="./mp3/主角.mp3" controls></audio>    
         </div>
-        <i class="fas fa-play play" title="暂停/播放"></i>
-        <i class="fas fa-fast-backward last" title="上一首"></i>
-        <i class="fas fa-fast-forward next" title="下一首"></i>
-        <i class="fas fa-random loop" title="顺序/循环播放"></i>
-        <i class="fas fa-bars list" title="音乐列表"></i>
-        <audio src="./mp3/主角.mp3" controls></audio>
     </div>
     <div class="concollect">
         <div class="time">
@@ -80,25 +81,22 @@
         <a href="https://www.csdn.net/" target="_blank" title="开发" name="CSDN">CSDN交流平台</a>
         <P>
         <a href="http://stu.ityxb.com/learning/beb61e0c57f14b69b9dd2cabc50419bc/preview/list" target="_blank" title="刷课" name="传播智客平台">传播智客平台</a>
-        <P>
-        <a href="http://cct.gdcp.cn" target="_blank" title="刷课" name="5Y学习平台">5Y学习平台</a>
         <p>
         <a href="https://www.nowcoder.com/" target="_blank" title="刷题" name="牛客网">牛客网平台</a>
-        <p>
-        <a href="https://pan.baidu.com/" target="_blank" name="百度网盘">百度网盘</a>
     </h1>
     <div class="plays-box">
         <figure>
-            <figcaption style="text-align: center; font-size: 18px; color: grey; margin: 25px 0px 8px 0px;">"...生日快乐..."</figcaption>
+            <figcaption style="text-align: center; font-size: 18px; color: grey; margin: 10px 0px 5px 0px;">"...生日快乐..."</figcaption>
             <video src="./mp3/视频.mp4" class="plays" ></video>             
             <p id="app"><a v-bind:href="url" style=" color: grey;">查看详情</a> </p>
         </figure>
     </div>
 
-    <img src="./image/bgimg1.jpg" class="bgimg">
+    <img src="./image/Payphone.jpg" class="bgimg">
 
     <script src="./js/jquery-1.12.4.js"></script>
     <script src="./js/audio_promax.js"></script>
+    
 </body>
 
 </html>
