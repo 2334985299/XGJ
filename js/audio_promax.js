@@ -142,18 +142,28 @@ last.onclick = function () {
     // console.log(n)
     NextLast()
 }
-// 随机一首
+
+var sss=0  // 随机播放指针
+// 随机播放
 function randomMusic() {
-    n = parseInt(Math.random()*10)
-    musicList(n)
-    console.log("随机一首: "+music[n].Name)
-    NextLast()
-    // audio.onended = function () {randomMusic()}
+    sss++
+    if(sss>=2){
+        sss=0
+    }else{
+        console.log("准备随机播放")
+        n = parseInt(Math.random()*10)
+        musicList(n)
+        console.log("随机一首: "+music[n].Name)
+        NextLast()
+        // audio.onended = function () {randomMusic()}
+    }
+    var randomtext=document.querySelector('.randomM');
+    sss!=0 ? (randomtext.innerHTML="取消随机"):(randomtext.innerHTML="随机播放",console.log("已取消随机播放..."));
 }
 
 var img = document.querySelector("img")
 var bgimg = document.querySelector(".bgimg")
-// 音频列表
+// 音频内容切换
 function musicList(n) {
     b.innerHTML = music[n].Name
     b2.innerHTML = music[n].Secname
@@ -175,10 +185,14 @@ function NextLast() {
     }
 }
 
-
 // 当前歌曲播放完毕后播放下一首，html里audio标签不要放loop属性
 audio.onended = function () {
-    Loop == 0 ? Next() : audio.play()
+    if(sss==0){
+        Loop == 0 ? Next() : audio.play() ;
+    }else{
+        sss=0;
+        randomMusic();
+    }
 }
 
 var loop = document.querySelector(".loop")
